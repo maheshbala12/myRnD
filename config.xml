@@ -1,0 +1,28 @@
+<!-- Properties for configuration of SalesforceEndpointModule -->
+
+<config>
+	<inputChannels>
+		<channel type="salesforce" processingType="Bulk" debugMode="true">
+			<channelEndpoint>https://ap2.salesforce.com/services/</channelEndpoint>
+			<userId>nirav@xoriant.com</userId>
+			<password>Xoriant123#6vFzd6kaZMIl7qQ2EpD8NMSW3</password>
+			<clientId>3MVG9ZL0ppGP5UrCL.VrS.HAmJR2h_G86Lccff7SCNcf7uGHICpdD51msQF9WiRfy0EzpPn.bh3Ia5PpxS3me</clientId>
+			<clientSecret>6069006597810186908</clientSecret>
+		</channel>
+	</inputChannels>
+	<outputChannels>
+		<channel type="REST">
+			<channelEndpoint>http://127.0.0.1/api</channelEndpoint>
+		</channel>
+	</outputChannels>
+	<tasks>
+		<task>
+			<inputChannel>salesforce</inputChannel>
+			<outputChannel>REST</outputChannel>
+			<dataSelection>Account,Contact</dataSelection>
+			<scheduler>
+				<timeToFetch></timeToFetch>
+			</scheduler>
+		</task>
+	</tasks>
+</config>
