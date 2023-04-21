@@ -14,6 +14,7 @@ public class BookReader implements BookObserver {
 
 	void returnBook(Book book) {
 		System.out.println(userName+" returned the book: "+book.getTitle());
+		book.deregisterObserver(this);
 		book.setStatus(Book.AVAILABILITY_STATUS.Available);
 	}
 	

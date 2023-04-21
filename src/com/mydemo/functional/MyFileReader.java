@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 
 import com.mydemo.common.GenericConstants.Gender;
 
-public class MyFileReader implements Spliterator<Employee> {
+public class MyFileReader implements Spliterator {
 
 	private String name, designation;
 	private Gender gender;
@@ -31,7 +31,7 @@ public class MyFileReader implements Spliterator<Employee> {
 	}
 
 	@Override
-	public boolean tryAdvance(Consumer<? super Employee> action) {
+	public boolean tryAdvance(Consumer action) {
 		if(
 			baseSpliterator.tryAdvance(str->name=str) &&
 			baseSpliterator.tryAdvance(str->gender=(str.equalsIgnoreCase("Male")?Gender.MALE:Gender.FEMALE)) &&

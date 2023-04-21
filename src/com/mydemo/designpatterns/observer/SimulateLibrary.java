@@ -8,19 +8,19 @@ public class SimulateLibrary {
 		
 //		List<Book> books = Arrays.asList(fivePoint, twoStates, warAndPeace);
 		
-		BookReader ravi = new BookReader("Ravi");
-		if(twoStates.rentOut(ravi))
-			System.out.println(ravi.getUserName()+" got book:"+twoStates.getTitle());
+		BookReader user1 = new BookReader("Ravi");
+		if(twoStates.rentOut(user1))
+			System.out.println(user1.getUserName()+" got book:"+twoStates.getTitle());
 		
-		BookReader mahesh = new BookReader("Mahesh");
-		if(twoStates.rentOut(mahesh))
-			System.out.println(ravi.getUserName()+" got book:"+twoStates.getTitle());
+		BookReader user2 = new BookReader("Mahesh");
+		if(twoStates.rentOut(user2))
+			System.out.println(user1.getUserName()+" got book:"+twoStates.getTitle());
 		else
-			System.out.println("Hi, "+mahesh.getUserName()+". The book:"+twoStates.getTitle()+" is already leased out.");
+			System.out.println("Hi, "+user2.getUserName()+". The book:"+twoStates.getTitle()+" is already leased out.");
 		
-		ravi.returnBook(twoStates);
-		if(twoStates.rentOut(mahesh))
-			System.out.println(mahesh.getUserName()+" got book:"+twoStates.getTitle());
+		user1.returnBook(twoStates);
+		if(twoStates.rentOut(user2))
+			System.out.println(user2.getUserName()+" got book:"+twoStates.getTitle());
 		
 	}
 }

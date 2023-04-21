@@ -4,13 +4,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Spliterator;
-import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -48,9 +46,12 @@ public class Java8StreamsExample {
 				new Employee("Ashwini", Gender.FEMALE, 33, 20000, "Jr. Soft. Engr"));*/
 		
 //		3) Create custom spliterator to create Stream and read Employee objects from a file
-		Path filePath = Paths.get("E:\\Learning\\POCs\\Standalone\\src\\com\\mydemo\\employees.txt");
+		Path filePath = Paths.get("D:\\Mahesh\\Learning\\POCs\\myRnD\\src\\com\\mydemo\\employees.txt");
+//		InputStream inputStream = ValidateCodeBlocks.class.getClassLoader().getResourceAsStream("employees.txt");
+		
 		Stream<String> streamOfLines = Files.lines(filePath);
 		Spliterator<String> sp = streamOfLines.spliterator();
+		
 		Spliterator<Employee> employeeSpliterator = new MyFileReader(sp, 3);
 		stream = StreamSupport.stream(employeeSpliterator, false);
 		
@@ -71,9 +72,9 @@ public class Java8StreamsExample {
 //		createemployeesMap(employeestream);
 		
 //		 (4) Grouping and aggregation examples
-//		groupByDesignation(employeestream);
+		groupByDesignation(employeestream);
 //		getCountByDesignation(employeestream);
-//		getMaxSalByDesignation(employeestream);
+		//getMaxSalByDesignation(employeestream);
 //		getEmpsWithMaxSalByDesignation(employeestream); // TODO: Needs to be fixed
 		
 //		(5) Mimic reduce ops using BinaryOperator
@@ -83,7 +84,7 @@ public class Java8StreamsExample {
 //		FunctionalList class is broken, needs fixed
 //		(Ref: E:\Learning\Functional Programming\Functional & Reactive Programming in Java\source files)
 		FunctionalList<Integer> list = new FunctionalList<Integer>(37,46,72,10,5);
-		list.show();
+		//list.show();
 //		(7) 
 		
 	}
@@ -122,7 +123,7 @@ public class Java8StreamsExample {
 	static void getMaxSalByDesignation(Stream<Employee> employeestream){
 		Map<String, Optional<Integer>> employeesMap = employeestream
 				.collect(Collectors.groupingBy(employee->employee.getDesignation(),
-						Collectors.mapping(emp->emp.getSalary(), Collectors.maxBy(Comparator.comparing(Function.identity()))
+						Collectors.mapping(emp->((Employee)emp).getSalary(), Collectors.maxBy(Comparator.comparing(Function.identity()))
 						)));
 		System.out.println(employeesMap);
 	}
