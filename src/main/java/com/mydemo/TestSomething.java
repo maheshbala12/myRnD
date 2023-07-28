@@ -62,6 +62,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 import java.util.regex.Matcher;
@@ -1440,19 +1441,8 @@ public class TestSomething extends TestSuper {
 		System.out.println();
 	}
 	
-	static void test() {
-		String[] arr = { "Mahesh", "Varun", "Poornima", "Meera" };
-		for(String str:arr) {
-			str+=" Iyer";
-		}
-		for(String str:arr) {
-			System.out.println(str);
-		}
-	}
-
 	public static void main(String[] args) throws Exception {
-		test();
-//		fillCellsInGridByQueries();
+		fillCellsInGridByQueries();
 //		practiceAssignment4();
 //		practiceAssignment3();
 //		practiceAssignment2();
@@ -2477,9 +2467,19 @@ public class TestSomething extends TestSuper {
 		}
 	}
 
+	// Example of a higher-order function (function that returns a function)
+	static Predicate<String> checkIfStartsWith(String str){
+		return name->name.startsWith(str);
+	}
+			
+	// Higher order function - a function that returns another function.
     private static void higherOrderFunction(){
-    	// Higher order function - a function that returns another function.
-        Function<Integer, Function<Integer,Integer>> makeAdder = x -> y -> x + y;
+//    	 Example #1
+    	String[] arr = { "Mahesh", "Varun", "Poornima", "Meera" };
+    	Arrays.stream(arr).filter(checkIfStartsWith("M")).forEach(System.out::println);
+
+//    	 Example #2
+    	Function<Integer, Function<Integer,Integer>> makeAdder = x -> y -> x + y;
         System.out.println(makeAdder.apply(18).apply(12));
     }
 	
