@@ -24,7 +24,9 @@ public class StringAndNumberProbs {
 				"Kinsley", "Maxwell", "Amy", "Piper", "River", "Ruby" };
 		List<String> res = Arrays.asList(names).stream().sorted((s1,s2)->s1.length()>s2.length()?1:-1).toList();
 		System.out.println();
+		// Intent is to sort by length of the string, if length is same then sort by natural order
 	}
+	
 
 	private static void removeDuplicateChars() {
 		String str="this is going somewhere";
