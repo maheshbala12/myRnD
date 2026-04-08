@@ -1,0 +1,112 @@
+Central Line:
+Chhatrapati Shivaji Terminus (CST)
+Masjid Bunder
+Sandhurst Road
+Byculla
+Chinchpokli
+Currey Road
+Parel
+Dadar (interchange)
+Matunga
+Sion
+Kurla
+Vidyavihar
+Ghatkopar
+Vikhroli
+Kanjurmarg
+Bhandup
+Nahur
+Mulund
+Thane (interchange)
+Kalwa
+Mumbra
+Diva
+Dombivli
+Thakurli
+Kalyan
+Vitthalwadi
+Ulhasnagar
+Ambernath
+Badlapur
+Vangani
+Shelu
+Neral
+Bhivpuri Road
+Karjat
+
+Western Line:
+Churchgate
+Marine Lines
+Charni Road
+Grant Road
+Mumbai Central
+Mahalaxmi
+Lower Parel
+Elphinstone Road
+Dadar (interchange)
+Matunga Road
+Mahim
+Bandra
+Khar Road
+Santacruz
+Vile Parle
+Andheri
+Jogeshwari
+Ram Mandir
+Goregaon
+Malad
+Kandivali
+Borivali
+Dahisar
+Mira Road
+Bhayandar
+Naigaon
+Vasai Road
+Nalasopara
+Virar
+
+Harbour Line:
+Chhatrapati Shivaji Terminus (CST)
+Masjid Bunder
+Sandhurst Road
+Dockyard Road
+Reay Road
+Cotton Green
+Sewri
+Wadala Road
+GTB Nagar
+Chunabhatti
+Kurla (interchange)
+Tilak Nagar
+Chembur (interchange)
+Govandi
+Mankhurd
+Vashi
+Sanpada
+Juinagar
+Nerul
+Seawoods-Darave
+Belapur CBD
+Kharghar
+Mansarovar
+Khandeshwar
+Panvel
+
+Trans-Harbour Line:
+Thane (interchange)
+Dighe
+Airoli
+Rabale
+Ghansoli
+Kopar Khairane
+Turbhe
+Sanpada
+Vashi
+Juinagar
+Nerul
+Seawoods-Darave
+CBD Belapur
+Kharghar
+Mansarovar
+Khandeshwar
+Panvel

@@ -1581,9 +1581,8 @@ public class TestSomething extends TestSuper {
 		// formatMessage();
 		//readFileInOneShot();
 //		dancingSlashes();
+
 	}
-
-
 
 	private static void dancingSlashes() throws InterruptedException {
 		char[] chars = {'|', '/', '-', '\\', '|', '/', '-'};

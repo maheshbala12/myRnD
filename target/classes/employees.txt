@@ -1,0 +1,40 @@
+Akshay Vyas
+Male
+31
+80000
+Sr. Software Engr
+Mangesh Rajbhar
+Male
+28
+40000
+Jr. Software Engr
+Preet Jain
+Male
+29
+35000
+Jr. Software Engr
+Rahul Verma
+Male
+30
+45000
+Software Engr
+Mahadev Dugane
+Male
+31
+50000
+Software Engr
+Alekhya Sarikonda
+Female
+26
+75000
+Business Analyst
+Nikit Modi
+Male
+36
+100000
+Sr. Data Analyst
+Amit Thakur
+Male
+38
+120000
+Project Mgr.
